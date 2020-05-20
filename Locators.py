@@ -29,8 +29,13 @@ driver.find_element_by_id('com.flipkart.android:id/search_autoCompleteTextView')
 driver.execute_script('mobile:performEditorAction',{'action':'search'})
 
 #Locate an element using class
-try:
-    location_not_now = driver.find_element_by_class_name('android.widget.Button')
-    driver.set_value(location_not_now,"NOT NOW")
-except InvalidElementStateException:
-    driver.find_element_by_id('com.flipkart.android:id/not_now_button').click()
+#try:
+ #   location_not_now = driver.find_element_by_class_name('android.widget.Button')
+  #  driver.set_value(location_not_now,"NOT NOW")
+#except InvalidElementStateException:
+driver.find_element_by_id('com.flipkart.android:id/not_now_button').click()
+
+driver.find_element_by_xpath('//android.widget.ImageButton[@content-desc="Back Button"]').click()
+driver.find_element_by_id('com.flipkart.android:id/back_icon').click()
+
+
