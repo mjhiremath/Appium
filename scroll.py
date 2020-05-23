@@ -34,9 +34,9 @@ Touch class TouchAction(driver)   .press(x=469, y=1903)   .move_to(x=454, y=924)
 '''
 
 for i in range(2):
+    time.sleep(5)
     touch = TouchAction(driver)
     touch.press(x=469, y=1903).move_to(x=469, y=924).release().perform()
-    time.sleep(3)
 
 
 
